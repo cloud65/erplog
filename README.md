@@ -61,4 +61,5 @@ pip install -r requirements.txt
 #### Если разрешено получать данные с сервера приложений только по ssh
 Необходимо в файле config.ini указать
 ```ssh=user@hostame
-ssh_key=Путь к ключу ssh```
+ssh_key=Путь к ключу ssh
+```
