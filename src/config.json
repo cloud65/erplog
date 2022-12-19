@@ -1,6 +1,6 @@
 {
-    "ssh": "erplog@srv-app1.local", 
-    "ssh_key": "/opt/erplog/key.key", 
-    "log_path": "/var/log/1C", 
-    "psql_url": "postgresql://de:depass@localhost/de"
+    "ssh": "root@192.168.50.21", 
+    "ssh_key": "key.key", 
+    "log_path": "/var/log/1C/zabbix/de", 
+    "psql_url": "postgresql://de:depass@192.168.13.51/de"
 }
