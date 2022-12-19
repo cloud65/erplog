@@ -1,0 +1,34 @@
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+    <log location="/var/log/1C" history="1"> 
+    <event>
+      <eq property="name" value="VRSREQUEST"/>
+      <like property="p:processName" value="ib-%"/>
+    </event>
+    <event>
+      <eq property="name" value="VRSRESPONSE"/>
+      <like property="p:processName" value="ib-%"/>
+    </event>    
+    <event>
+      <eq property="name" value="CALL"/>
+      <like property="p:processName" value="ib-%"/>
+    </event>
+    <event>
+      <eq property="name" value="DBPOSTGRS"/>
+      <like property="p:processName" value="ib-%"/>
+      <ne property="t:applicationName" value="BackgroundJob"/>
+    </event>
+    <property name="p:processName"/>
+    <property name="OSThread"/>
+    <property name="t:clientID"/>
+    <property name="t:applicationName"/>
+    <property name="t:connectID"/>
+    <property name="Usr"/>
+    <property name="SessionID"/>
+    <property name="Context"/>     
+    <property name="sql"/>
+    <property name="cputime"/>
+    <property name="memory"/>
+    <property name="memorypeak"/>    
+    <property name="val"/>
+  </log>  
+</config>

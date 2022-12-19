@@ -1,0 +1,14 @@
+[Unit]
+Description=ERP-log GUI daemon
+After=network.target 
+
+[Service]
+Type=simple
+User=erplog
+Group=erplog
+WorkingDirectory=/opt/erp-log
+ExecStart=/opt/erp-log/venv/bin/python3 /opt/erp-log/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
