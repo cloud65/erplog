@@ -164,5 +164,5 @@ cython_debug/
 *.key
 update-repo.sh
 
-src/config.json
-src/*.key
+/src/config.json
+/src/*.key
