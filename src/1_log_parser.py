@@ -6,8 +6,12 @@ def main():
     args = get_args()
     print(f"Start: {__file__}")
 
-    sftp = RemoteFileReader(args.ssh, args.ssh_key)    
+    if args.ssh and args.ssh_key:
+        sftp = RemoteFileReader(args.ssh, args.ssh_key)    
+    else:
+        sftp = None
     parser = LogParser(path=args.log_path, sftp=sftp)
+    
     init_database(args.psql_url, drop=False)  
     
     # Считаем и установим чекпойнты

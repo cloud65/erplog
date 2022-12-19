@@ -33,9 +33,13 @@ chown erplog.erplog -R /opt/erp-log
 
 создаем ссылки:
 Веб-интерфейс
-```ln -s /opt/erp-log/erp-log-gui.service /etc/systemd/system/```
+```
+ln -s /opt/erp-log/erp-log-gui.service /etc/systemd/system/
+```
 Формирование слоев каждый час
-```ln -s /opt/erp-log/update-layers.sh /etc/cron.hourly/```
+```
+ln -s /opt/erp-log/update-layers.sh /etc/cron.hourly/
+```
 
 запускаем GUI
 ```
@@ -55,12 +59,16 @@ python3 -m venv venv
 pip install -r requirements.txt
 ```
 Созаем ссылку
-```ln -s /opt/erp-log/update-layers.sh /etc/cron.hourly/```
+```
+ln -s /opt/erp-log/update-layers.sh /etc/cron.hourly/
+```
 В файле **update-layers.sh** оставляем вызов только *1_log_parser.py*,
 а на сервере витрин из него его исключаем
 
 #### Если разрешено получать данные с сервера приложений только по ssh
-Необходимо в файле config.ini указать
-```ssh=user@hostame
-ssh_key=Путь к ключу ssh
+Необходимо в файле **config.json** указать
 ```
+"ssh": "user@hostame",
+"ssh_key": "Путь к ключу ssh"
+```
+иначе оставить пустые значения
