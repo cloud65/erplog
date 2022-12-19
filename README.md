@@ -11,7 +11,7 @@
 
 ### Установка
 
-Настроить сбор технологического журнала (https://v8.1c.ru/platforma/tehnologicheskiy-zhurnal/) используя параметрф файла **1c/logcfg.xml**
+Настроить сбор технологического журнала (https://v8.1c.ru/platforma/tehnologicheskiy-zhurnal/) используя файл настроек **1c/logcfg.xml**
 
 #### Сервер витрин
 Созаем каталог
